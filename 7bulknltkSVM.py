@@ -184,7 +184,9 @@ featureList = list(set(featureList))
 # Extract feature vector for all tweets in one shote
 training_set = nltk.classify.util.apply_features(extract_features, tweets)
 
-testTweet = 'Hari yang mengecewakan. Menghadiri pameran mobil untuk mencari pendanaan, harganya malah lebih mahal'
+# testTweet = 'Hari yang mengecewakan. Menghadiri pameran mobil untuk mencari pendanaan, harganya malah lebih mahal'
+# testTweet = 'Akhirnya arsenal menjadi pemenang premire leage, ini yang terbaik.'
+testTweet = 'apakah kamu membagikan #lelucon #kutipan #musik #foto atau #berita #artikel '
 test_tweets2 = processTweet(testTweet)
 test_tweets = getFeatureVector(test_tweets2, stopWords)
 test_feature_vector = getSVMFeatureVector(test_tweets, featureList)
@@ -207,13 +209,14 @@ result = getSVMFeatureVectorAndLabels(tweets, featureList)
 # p_labels, p_accs, p_vals = svm_predict([0] * len(test_feature_vector),test_feature_vector, classifier)
 ### sampai sini
 
-klasifikasi = svm.SVC()
+klasifikasi = svm.SVC(probability=True)
 # klasifikasi = svm.LinearSVC()
 # klasifikasi = svm.SVR()
 # print result['labels']
 klasifikasi = klasifikasi.fit(result['feature_vector'],result['labels'])
 
 prediksi = klasifikasi.predict([test_feature_vector])
+predik_proba = klasifikasi.predict_proba([test_feature_vector])
 
 if prediksi == 0:
     print 'positive'
@@ -221,3 +224,4 @@ elif prediksi == 1:
     print 'negative'
 else:
     print 'neutral'
+print predik_proba
