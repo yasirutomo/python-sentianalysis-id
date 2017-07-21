@@ -214,3 +214,10 @@ klasifikasi = svm.SVC()
 klasifikasi = klasifikasi.fit(result['feature_vector'],result['labels'])
 
 prediksi = klasifikasi.predict([test_feature_vector])
+
+if prediksi == 0:
+    print 'positive'
+elif prediksi == 1:
+    print 'negative'
+else:
+    print 'neutral'
