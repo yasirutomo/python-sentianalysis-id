@@ -214,8 +214,3 @@ klasifikasi = svm.SVC()
 klasifikasi = klasifikasi.fit(result['feature_vector'],result['labels'])
 
 prediksi = klasifikasi.predict([test_feature_vector])
-
-print prediksi
-# print p_labels
-# print p_accs
-# print p_vals
