@@ -133,7 +133,7 @@ def extract_features(tweet):
     return features
 #end
 
-ini = processTweet('just had some bloodwork done. my arm hurts')
+ini = processTweet('baru saja donor darah, tangan saya masih sakit')
 ini2 = getFeatureVector(ini)
 ini3 = extract_features(ini2)
 print ini3
