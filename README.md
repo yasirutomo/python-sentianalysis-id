@@ -1,6 +1,6 @@
 # Sentiment Analysis Bahasa Indonesia
 
-Sentiment analysis (analisis sentimen) in Bahasa Indonesia Using Python.
+Sentiment analysis (analisis sentimen) in Bahasa Indonesia using Python.
 
 ## Requirement
 * Python 2.7.X
