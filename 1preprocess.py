@@ -21,7 +21,7 @@ def processTweet(tweet):
 #end
 
 #Read the tweets one by one and process it
-fp = open('data/sampleTweets.txt', 'r')
+fp = open('data/sampleTweetsID.csv', 'r')
 line = fp.readline()
 
 while line:

@@ -21,7 +21,7 @@ def processTweet(tweet):
 #end
 
 #Read the tweets one by one and process it
-fp = open('data/sampleTweets.txt', 'r')
+fp = open('data/sampleTweetsID.csv', 'r')
 line = fp.readline()
 
 while line:
@@ -83,11 +83,11 @@ def getFeatureVector(tweet):
 #end
 
 #Read the tweets one by one and process it
-fp = open('data/sampleTweets.txt', 'r')
+fp = open('data/sampleTweetsID.csv', 'r')
 line = fp.readline()
 
-st = open('data/feature_list/stopwords.txt', 'r')
-stopWords = getStopWordList('data/feature_list/stopwords.txt')
+st = open('data/feature_list/stopwordsID.txt', 'r')
+stopWords = getStopWordList('data/feature_list/stopwordsID.txt')
 
 while line:
     processedTweet = processTweet(line)

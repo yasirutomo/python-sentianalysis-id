@@ -105,3 +105,17 @@ testTweet = 'Hari yang mengecewakan. Menghadiri pameran mobil untuk mencari pend
 processedTestTweet = processTweet(testTweet)
 sentiment = NBClassifier.classify(extract_features(getFeatureVector(processedTestTweet, stopWords)))
 print "testTweet = %s, sentiment = %s\n" % (testTweet, sentiment)
+
+
+# kal = getFeatureVector(processTweet(testTweet),stopWords)
+# kal = " ".join(str(x) for x in kal)
+# print kal
+# d = {}
+# for word in kal.split():
+#     word = int(word) if word.isdigit() else word
+#     if word in d:
+#         d[word] += 1
+#     else:
+#         d[word] = 1
+
+# print d
